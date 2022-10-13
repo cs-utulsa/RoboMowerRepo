@@ -2,15 +2,19 @@ class Driver
 {
 };
 
-int driveInstructions()
+int turnRight()
 {
 }
 
-float findLengthOfFence()
+int turnLeft()
 {
 }
 
-float findWidthOfFence()
+int rotateWheels()
+{
+}
+
+int brake()
 {
 }
 
