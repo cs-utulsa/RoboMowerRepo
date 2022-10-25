@@ -1,0 +1,9 @@
+class Cutting_Algo: 
+    def driveInstructions():
+        return null
+    def findLengthOfFence(): 
+        return null
+    def findWidthOfFence():
+        return null
+    def main():
+        return null
