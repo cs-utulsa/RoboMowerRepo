@@ -1,8 +1,9 @@
 import array as arr
-from Driver import Driver
+from clience import Point
 
 
 class Cutting_Algo:
+
     def __init__(self, width, length, array):
         self.width = width
         self.length = length
@@ -10,9 +11,9 @@ class Cutting_Algo:
         self.grassDesign = array
         self.val = 0
         self.cut = False
-        drive = Driver()
+        self.clientDirection = Point()
 
-    def driveInstructions(self):
+    def clientDirectionInstructions(self):
         for row in self.length:
             if (self.endpoint == False):
                 for column in reversed(self.width):
@@ -21,35 +22,34 @@ class Cutting_Algo:
                         self.cut = False
                     else:
                         self.cut = True
-                    self.drive.rotateWheels()
-                    self.drive.brake()
+                    self.clientDirection.move_up()
                 self.endpoint = True
             else:
                 for column in self.width:
-                    # move
                     val = self.grassDesign[row][column]
                     if (val == 0):
                         self.cut = False
                     else:
                         self.cut = True
-                    self.drive.rotateWheels()
-                    self.drive.brake()
+                    self.clientDirection.move_up()
                 self.endpoint = False
             if (self.endpoint == True):
                 self.cut = False
-                self.drive.turnRight()
-                self.drive.rotateWheels()
-                self.drive.brake()
-                self.drive.turnRight()
+                self.clientDirection.move_right()
+                self.clientDirection.move_up()
+                self.clientDirection.move_right()
             else:
                 self.cut = True
-                self.drive.turnLeft()
-                self.drive.rotateWheels()
-                self.drive.brake()
-                self.drive.turnLeft()
+                self.clientDirection.move_left()
+                self.clientDirection.move_up()
+                self.clientDirection.move_left()
 
     def findLengthOfFence(self):
         return self.length
 
     def findWidthOfFence(self):
         return self.width
+
+    # results(self):
+
+    # def caculateTime(self):
