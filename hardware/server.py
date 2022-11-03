@@ -1,3 +1,106 @@
+PhoNoodles
+#2579
+
+PhoNoodles — Today at 10:21 PM
+again this is just the first prototype for this project
+so we can use this code for the next one
+pins are 22, 23, 24, and 25 correct?
+ShleyMeister — Today at 10:29 PM
+yup
+PhoNoodles — Today at 10:40 PM
+#import modules
+import sys
+import pygame
+from pygame.locals import *
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM)
+Expand
+RoboPrototype.py
+3 KB
+see if that works
+typed as fast as i can
+because the thing cant be copy and paste
+fingers crossed
+if this work, i can start synchronizing this code with the library that xingzhou provided
+ShleyMeister — Today at 11:00 PM
+i dont think the input from my keyboard will do it, maybe its expecting a keyboard input from the raspberry pi? I tried using a dongle but i got nothing. I even looked over and fixed a part of it but i got nothing
+PhoNoodles — Today at 11:05 PM
+Do you think it might be the raspberry pi?
+Also are you doing arrow keys or wasd
+ShleyMeister — Today at 11:07 PM
+wasd but not gonna lie i tried both
+PhoNoodles — Today at 11:08 PM
+that is so weird
+everything is followed accordingly
+it must have to do something with the raspberry pi
+ShleyMeister — Today at 11:09 PM
+yeah im at a loss as well at whats wrong. maybe. Its running on the raspberry pi, but maybe theres an issue with the pins?
+PhoNoodles — Today at 11:10 PM
+because you said the same thing was happening to the one xingzhou put right?
+then there must be something up with the raspberry pi i think
+guess best is to look through the document and see if there is any differnces
+ShleyMeister — Today at 11:10 PM
+yeah but your pins were right in the code, im more saying maybe there's something wrong with the pins on the rasp pi
+PhoNoodles — Today at 11:11 PM
+ohhh
+ShleyMeister — Today at 11:11 PM
+i did, i fixed a problem and it let the program run indefinitely, but not running :/
+PhoNoodles — Today at 11:12 PM
+so is the client working?
+but the instructions is not working for the raspberry pi
+ShleyMeister — Today at 11:15 PM
+yup
+PhoNoodles — Today at 11:16 PM
+this is a stupid question but we know that the motor power are on right
+or as i say it wired correctly
+right now i think there might be something up with the robot because we know the client works and the server works
+its must be something with the robot
+ShleyMeister — Today at 11:17 PM
+yes. the card has a red led to let me know its powered
+PhoNoodles — Today at 11:17 PM
+hmm
+ShleyMeister — Today at 11:18 PM
+yeah, ive triple checked which wires went where
+PhoNoodles — Today at 11:18 PM
+that is so weird what the heck
+i could take it to riley rq
+meet him early in the morning and see if he can help us
+before presenting it
+ShleyMeister — Today at 11:19 PM
+sure, id be down. I have class at 11 but i can meet before then
+PhoNoodles — Today at 11:19 PM
+because worst comes to worst, riley has his built and we can just use that lol
+i am down
+im just gonna keep looking at this
+just lmk if you get a breakthrough
+but i think the code that xingzhou is working
+because the code that we used is from youngwoks and if that isnt working then it must be a hardware issue
+ShleyMeister — Today at 11:21 PM
+yeah im leaning towards a hardware issue too. a part must be malfunctioning or something
+PhoNoodles — Today at 11:21 PM
+might have to use riley to start just for now if we cant figure it out when we meet up with him
+so are we gonna assume that the code that xingzhou provided works?
+also can send me the code for both the clience and the server so i can edit it
+ShleyMeister — Today at 11:23 PM
+import pygame
+import socket
+import sys
+
+
+class ClientSocketCar(object):
+Expand
+clience.py
+5 KB
+import RPi.GPIO as GPIO
+import socket
+import time
+
+
+class ServerSocketCar(object):
+Expand
+server.py
+4 KB
+﻿
 import RPi.GPIO as GPIO
 import socket
 import time
