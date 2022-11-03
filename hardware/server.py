@@ -59,11 +59,11 @@ class CarPi(object):
         # initializing pin
         GPIO.setmode(GPIO.BCM)  # set pinmode
         GPIO.setwarnings(False)  # Ignore pin setting error report error when pin is not 'IN' status
-        # # my GPIO [4, 17, 10 ,9, 11, 14, 15 ,18 ,23 ,24, 25, 8, 7]
+        # # my GPIO [4, 17, 10 ,9, 11, 14, 15 ,18 ,22, 23 ,24, 25, 8, 7]
         # # two software pwm, two direction interface
-        GPIO.setup((22, 23, 24, 25), GPIO.OUT) # the pin that going to be used (4, 17)
-        self.pin_p1 = GPIO.PWM(22, 50)
-        self.pin_p2 = GPIO.PWM(23, 50)
+        GPIO.setup((22, 23, 24, 25), GPIO.OUT) # the pin that going to be used (22,23,24,25)
+        self.pin_p1 = GPIO.PWM(22, 23)
+        self.pin_p2 = GPIO.PWM(24, 25)
         # duty cycle
         self.dc = 50
         self.pin_p1.start(self.dc)
