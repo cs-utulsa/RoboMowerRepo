@@ -1,5 +1,6 @@
 import array as arr
 from clience import Point
+from server import CarPi
 
 
 class Cutting_Algo:
@@ -11,7 +12,7 @@ class Cutting_Algo:
         self.grassDesign = array
         self.val = 0
         self.cut = False
-        self.clientDirection = Point()
+        self.moveDirection = CarPi()
 
     def clientDirectionInstructions(self):
         for row in self.length:
@@ -22,7 +23,7 @@ class Cutting_Algo:
                         self.cut = False
                     else:
                         self.cut = True
-                    self.clientDirection.move_up()
+                    self.moveDirection.moveDirection('up')
                 self.endpoint = True
             else:
                 for column in self.width:
@@ -31,18 +32,18 @@ class Cutting_Algo:
                         self.cut = False
                     else:
                         self.cut = True
-                    self.clientDirection.move_up()
+                    self.moveDirection.moveDirection('up')
                 self.endpoint = False
             if (self.endpoint == True):
                 self.cut = False
-                self.clientDirection.move_right()
-                self.clientDirection.move_up()
-                self.clientDirection.move_right()
+                self.moveDirection.moveDirection('right')
+                self.moveDirection.moveDirection('up')
+                self.moveDirection.moveDirection('right')
             else:
                 self.cut = True
-                self.clientDirection.move_left()
-                self.clientDirection.move_up()
-                self.clientDirection.move_left()
+                self.moveDirection.moveDirection('left')
+                self.moveDirection.moveDirection('up')
+                self.moveDirection.moveDirection('left')
 
     def findLengthOfFence(self):
         return self.length
