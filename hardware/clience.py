@@ -12,7 +12,7 @@ class ClientSocketCar(object):
         initializing network socket
         '''
         self.clinet_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # create Network socket
-        self.clinet_socket.connect(('172.16.194.57', 9900))  # ip address ,port number
+        self.clinet_socket.connect(('172.16.195.11', 22))  # ip address ,port number
 
     # sending data
     def up_socket(self):
