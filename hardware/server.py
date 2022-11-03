@@ -1,8 +1,3 @@
-
-
-
-class ServerSocketCar(object):
-server.py
 import RPi.GPIO as GPIO
 import socket
 import time
