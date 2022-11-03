@@ -93,14 +93,14 @@ class Windows(object):
     '''
     create window fram
     '''
-    # 初始化
+    # initialization
     def __init__(self):
         # initialization
         pygame.init()
         self.window = pygame.display.set_mode([640, 320])
         # initialize background
         pygame.display.set_caption('Control Panel')
-        self.image = pygame.image.load('car.png')
+        self.image = pygame.image.load('controlPanel.png')
         self.point_img = Point()
 
     def draw(self):
